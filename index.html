@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modo Oscuro con Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body.light {
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+
+      body.dark {
+        background-color: #212529;
+        color: #f8f9fa;
+      }
+
+      .card {
+        transition: background-color 0.3s ease, color 0.3s ease,
+          box-shadow 0.3s ease;
+        border: none;
+        border-radius: 1rem;
+      }
+
+      body.light .card {
+        background-color: #ffffff;
+        color: #212529;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      body.dark .card {
+        background-color: #343a40;
+        color: #f8f9fa;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .navbar {
+        transition: background-color 0.3s ease;
+      }
+
+      body.light .navbar {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      body.dark .navbar {
+        background-color: #343a40;
+        border-bottom: 1px solid #4a4a4a;
+      }
+      .btn:hover {
+        transform: scale(
+          1.05
+        );  
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-lightning-charge-fill text-primary"></i> MySite
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <div class="form-check form-switch mt-1 ms-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="darkModeToggle"
+                />
+                <label class="form-check-label" for="darkModeToggle"
+                  >Modo Oscuro</label
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5 pt-5">
+      <h1 class="text-center my-4">Ejemplo de Modo Oscuro con Navbar</h1>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-3 text-center">
+            <i class="bi bi-star-fill text-warning fs-1 mb-3"></i>
+            <h5 class="card-title">Tarjeta 1</h5>
+            <p class="card-text">Esta tarjeta incluye un ícono bonito para llamar la atención.</p>
+            <button class="btn btn-primary btn-sm rounded-3 transition-all">Más Información</button>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card h-100 p-3 text-center">
+            <i class="bi bi-gear-fill text-secondary fs-1 mb-3"></i>
+            <h5 class="card-title">Tarjeta 2</h5>
+            <p class="card-text">Puedes personalizar las tarjetas como prefieras fácilmente.</p>
+            <button class="btn btn-success btn-sm rounded-4 transition-all">Ver Detalles</button>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="card h-100 p-3 text-center">
+            <i class="bi bi-emoji-smile-fill text-danger fs-1 mb-3"></i>
+            <h5 class="card-title">Tarjeta 3</h5>
+            <p class="card-text">Añade íconos de Bootstrap para hacerlas más atractivas.</p>
+            <button class="btn btn-danger btn-sm rounded-5 transition-all">Leer Más</button>
+          </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
